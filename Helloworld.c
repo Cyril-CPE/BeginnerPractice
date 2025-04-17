@@ -21,7 +21,7 @@ int main(){
     float totalWaterintake = day1 + day2 + day3;
     float averageWaterintake = totalWaterintake / 3;
 
-    printf("You drank a total of %.2f Liters of Water in 3 days.\n",totalWaterintake);
+    printf("You drank a total of %.3f Liters of Water in 3 days.\n",totalWaterintake);
     printf("You drank an average %.2f Liter everyday\n", averageWaterintake);
 
     float intake = recdaily - averageWaterintake;

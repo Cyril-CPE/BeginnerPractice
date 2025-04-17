@@ -1,50 +1,30 @@
 #include<stdio.h>
 
-int main (){
-    char name[30];
-    double distance1;
-    double distance2;
-    double distance3;
-    double fuel1;
-    double fuel2;
-    double fuel3;
+int main(){
+    const float recdaily = 2.7;
+    float day1;
+    float day2;
+    float day3;
+    char name[10];
 
-    printf("To start, please enter your name: \n");
-    fgets(name, 30, stdin);
-    printf("Good Morning to you %s", name);
-
-
-    printf("Enter your distance traveled in your recent trips \n");
-
-    printf("First Trip: ");
-    scanf("%lf",&distance1);
-
-    printf("Second Trip: ");
-    scanf("%lf",&distance2);
-
-    printf("Third Trip: ");
-    scanf("%lf",&distance3);
-
-    printf("Enter your fuel consumed in your recent trips \n");
+    printf("-----Hydration Tracker----\n");
     
-    printf("First Trip: ");
-    scanf("%lf",&fuel1);
+    printf("How many Liters for Day 1: \n");
+    scanf("%f",&day1);
 
-    printf("Second Trip: ");
-    scanf("%lf",&fuel2);
+    printf("How many Liters for Day 2: \n");
+    scanf("%f",&day2);
 
-    printf("Third Trip: ");
-    scanf("%lf",&fuel3);
+    printf("How many Liters for Day 3: \n");
+    scanf("%f",&day3);
 
+    float totalWaterintake = day1 + day2 + day3;
+    float averageWaterintake = totalWaterintake / 3;
 
-    double totalDistance = distance1 + distance2 + distance3;
-    printf("You have travelled a total distance of %.2lfkm.\n", totalDistance);
+    printf("You drank a total of %.2f Liters of Water in 3 days.\n",totalWaterintake);
+    printf("You drank an average %.2f Liter everyday\n", averageWaterintake);
 
-    double totalFuel = fuel1 + fuel2 + fuel3;
-    printf("You have consumed a total of %.2lfL of fuel.\n",totalFuel);
-
-    double effeciency = totalDistance / totalFuel;
-    printf("Your vehicle has an average total effeciency of %.2lf", effeciency);
-
+    float intake = recdaily - averageWaterintake;
+    printf("%f", intake);
     return 0;
 }

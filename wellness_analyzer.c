@@ -66,7 +66,7 @@ int main (){
     float c = cos(rad);
     float t = tan(rad);
 
-    printf("\nSIN: %.2f\nCOS: %.2f\nTAN: %.2f",s ,c ,t);
+    printf("\nSIN: %.2f\nCOS: %.2f\nTAN:  %.2f",s ,c ,t);
 
 
 
